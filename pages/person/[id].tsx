@@ -13,7 +13,7 @@ export const getServerSideProps = async (
             id: true,
             name: true,
             nconst: true,
-            actedIn: true,
+            actedIn: {id:true, title:true},
             filter_single: e.op(
                 person.id,
                 '=',
@@ -27,6 +27,7 @@ export const getServerSideProps = async (
 export type GetMovie = InferGetServerSidePropsType<typeof getServerSideProps>;
 
 const Person: React.FC<GetMovie> = (props) => {
+    console.log(4,props.person)
     return (
         <main >
             <article key={props.person.id} >
