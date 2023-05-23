@@ -9,16 +9,11 @@ export const client = createClient();
 const selectPersons = e.select(e.Person, () => ({
   id: true,
   name: true,
-  acted_in: {
+  nconst: true,
+  actedIn: {
     id: true,
-    title: true,
-    types: true
-  },
-  directed: {
-    id: true,
-    title: true,
-    types: true
-  },
+    title: true
+  }
 }));
 
 export type Persons = $infer<typeof selectPersons>;

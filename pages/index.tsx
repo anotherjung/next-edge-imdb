@@ -26,9 +26,8 @@ const HomePage: NextPage = () => {
         <div key={index} className="m-3 p-3 bg-gray-300">
           <div className="mx-auto max-w-7xl px-6">
             <div className="mx-auto max-w-2xl">
-              <h2 >{p.title}</h2>
+              <Link href={p.id}><h2>{p.title}</h2></Link>
               <p >{p.content}</p>
-              <Link href={p.id}>{p.title}</Link>
             </div>
           </div>
         </div>

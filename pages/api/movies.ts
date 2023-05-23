@@ -8,12 +8,9 @@ export const client = createClient();
 
 const selectMovies = e.select(e.Movie, () => ({
   id: true,
+  tconst: true,
   title: true,
   actors: { 
-    id: true,
-    name: true
-   },
-   director: { 
     id: true,
     name: true
    }

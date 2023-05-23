@@ -19,16 +19,17 @@ const Page: NextPage = () => {
                     <div className="m-3 p-3 bg-gray-300">
                         <div className="mx-auto max-w-7xl px-6">
                             <div className="mx-auto max-w-2xl">
-                                <h2 >{movie.title}</h2>
-                                <Link href={`/movie/${movie.id}`} key={movie.id}  >
-                                    {movie.title}</Link>
+                                <Link href={`/movie/${movie.id}`} key={movie.id}  > {movie.title}</Link>
+                                    <p>{movie.tconst}</p>
                                 <h3>Cast:</h3>
+                                <div className='mx-3'>
                                 {movie.actors.map((person) => (
                                     <article key={person.id}>
                                         <Link href={`/person/${person.id}`} key={person.id} >
                                             {person.name}</Link>
                                     </article>
                                 ))}
+                                </div>
                             </div>
                         </div>
                     </div>

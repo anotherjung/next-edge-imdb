@@ -13,7 +13,6 @@ export const getServerSideProps = async (
             id: true,
             title: true,
             actors: { id: true, name: true },
-            director: { id: true, name: true },
             filter_single: e.op(
                 movie.id,
                 '=',
@@ -34,14 +33,13 @@ const Movie: React.FC<GetMovie> = (props) => {
                     <div className="mx-auto max-w-2xl">
                         <h1 >{props.movie.title}</h1>
                         <h3>Actors:</h3>
+                        <div className="mx-3">
                         {props.movie.actors.map((person) => (
                             <article key={person.id}>
                                 <Link href={`/person/${person.id}`} key={person.id}>
                                     {person.name}</Link></article>
                         ))}
-                        {/* <h3>Director:</h3>
-                        <Link href={`/person/${props.movie.director.id}`} key={props.movie.director.id}>
-                            {props.movie.director.name}</Link> */}
+                        </div>
                     </div>
                 </div>
             </div>
