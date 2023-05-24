@@ -1,8 +1,6 @@
 import {createClient} from 'edgedb';
 import e from '../dbschema/edgeql-js';
-//import {titles} from './seed-titles';
 import * as titles from './seed-titles.json';
-//import {names} from './seed-names';
 import * as names from './seed-names.json';
 import { Person } from '../dbschema/edgeql-js/modules/default';
 
@@ -15,7 +13,7 @@ try {
     await e.insert(e.Movie, {
       title: t.title,
       tconst: t.tconst,
-      startYear: t.startYear,
+      startYear: parseInt(t.startYear),
     }).run(client);
   }
 

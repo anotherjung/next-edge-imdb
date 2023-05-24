@@ -1,8 +1,6 @@
 import {createClient} from 'edgedb';
 import e from '../dbschema/edgeql-js';
-//import {titles} from './seed-titles';
 import * as titles from './seed-titles.json';
-//import {names} from './seed-names';
 import * as names from './seed-names.json';
 import { Movie } from '../dbschema/edgeql-js/modules/default';
 
@@ -12,7 +10,6 @@ async function run() {
 try {
 
   for ( const n of names ){
-    console.log(1)fd
     console.log(1,n)
     for (const k of n.knownForTitles) {
       console.log(2,k)

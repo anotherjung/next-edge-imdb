@@ -12,6 +12,7 @@ const selectPersons = e.select(e.Person, () => ({
   nconst: true,
   actedIn: {
     id: true,
+    tconst: true,
     title: true
   }
 }));

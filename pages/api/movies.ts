@@ -12,6 +12,7 @@ const selectMovies = e.select(e.Movie, () => ({
   title: true,
   actors: { 
     id: true,
+    nconst: true,
     name: true
    }
 }));
